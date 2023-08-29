@@ -36,7 +36,7 @@
     "event-source-polyfill": "^1.0.31",
     "eventsource-parser": "^1.0.0",
     "lucide-react": "^0.259.0",
-    "next": "13.4.9",
+    "next": "^13.4.19",
     "openai-edge": "^1.2.0",
     "postcss": "8.4.25",
     "react": "18.2.0",
