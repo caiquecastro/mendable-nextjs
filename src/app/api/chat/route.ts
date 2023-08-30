@@ -27,8 +27,7 @@ export async function POST(req: Request) {
     body: JSON.stringify(data),
   });
 
-  const conversation_id = await r.json();
-
+  const conversation = await r.json();
 
   const history = [];
   for (let i = 0; i < messages.length; i += 2) {
@@ -47,7 +46,7 @@ export async function POST(req: Request) {
     api_key: process.env.MENDABLE_API_KEY,
     question: question,
     history: history,
-    conversation_id: conversation_id.conversation_id,
+    conversation_id: conversation.conversation_id,
   });
 
   return new StreamingTextResponse(stream);
